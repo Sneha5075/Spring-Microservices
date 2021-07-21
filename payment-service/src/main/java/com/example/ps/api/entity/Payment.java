@@ -5,15 +5,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "PAYMENT_TB")
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Document(collection = "PAYMENT_TB")
 public class Payment {
 	
 	@Id
